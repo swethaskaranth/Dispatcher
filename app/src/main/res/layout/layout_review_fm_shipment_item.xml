@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box_border_with_rounded_corners">
+
+    <TextView
+        android:id="@+id/labelRefId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_11"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:lineSpacingMultiplier="1.23"
+        android:text="@string/ref_id_label"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/labelLbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_11"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:lineSpacingMultiplier="1.23"
+        android:text="@string/lbn"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRefId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_11"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="3.08"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="@id/labelRefId"
+        app:layout_constraintTop_toBottomOf="@id/labelRefId"
+        tools:text="605780-BDY" />
+
+    <TextView
+        android:id="@+id/tvLbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_11"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="3.08"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/labelRefId"
+        tools:text="605780-BDY" />
+
+    <TextView
+        android:id="@+id/labelSelectReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_11"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:lineSpacingMultiplier="1.23"
+        android:text="@string/select_reason"
+        android:textColor="@color/text_color_blue_dark"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="@id/tvRefId"
+        app:layout_constraintTop_toBottomOf="@id/tvRefId" />
+
+    <RadioGroup
+        android:id="@+id/rgSelectReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/labelSelectReason">
+
+        <RadioButton
+            android:id="@+id/rbLost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12"
+            android:fontFamily="@font/open_sans_regular"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:text="@string/lost_in_transit"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13" />
+
+        <RadioButton
+            android:id="@+id/rbDamaged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/open_sans_regular"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:text="@string/damaged_by_db"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13" />
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

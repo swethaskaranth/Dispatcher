@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nested_item_background">
+
+    <CheckBox
+        android:id="@+id/cbSelectShipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_17"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTaskType" />
+
+    <TextView
+        android:id="@+id/tvTaskType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:fontFamily="@font/open_sana_bold"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toEndOf="@id/cbSelectShipment"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Delivery" />
+
+    <TextView
+        android:id="@+id/timeSlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:fontFamily="@font/open_sana_bold"
+        android:textSize="@dimen/txt_12"
+        android:textColor="@color/text_color_blue_dark"
+        android:background="@drawable/slot_background"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingBottom="@dimen/margin_4"
+        android:visibility="gone"
+        tools:text="9 AM - 4 PM"
+        />
+
+
+    <TextView
+        android:id="@+id/tvPackageId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_6"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="@id/tvTaskType"
+        app:layout_constraintTop_toBottomOf="@id/tvTaskType"
+        tools:text="Package ID #12345678901234" />
+
+    <TextView
+        android:id="@+id/tv_commit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="@drawable/red_background"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_2"
+        android:paddingEnd="@dimen/margin_5"
+        android:paddingBottom="@dimen/margin_2"
+        android:textColor="@color/red"
+        android:textSize="@dimen/txt_12"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tvPackageId"
+        app:layout_constraintTop_toBottomOf="@id/tvTaskType"
+        tools:text="by 10pm" />
+
+    <TextView
+        android:id="@+id/tvLbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_12"
+        app:layout_constraintStart_toStartOf="@id/tvPackageId"
+        app:layout_constraintTop_toBottomOf="@id/tvPackageId"
+        tools:text="LBN #00889891111" />
+
+    <TextView
+        android:id="@+id/tvExpected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/tvLbn"
+        app:layout_constraintTop_toBottomOf="@id/tvLbn"
+        tools:text="LBN #00889891111" />
+
+    <TextView
+        android:id="@+id/tvBoxCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="@string/no_of_boxes"
+        android:textColor="@color/link_blue"
+        android:textSize="@dimen/txt_12"
+        app:layout_constraintStart_toEndOf="@id/tvLbn"
+        app:layout_constraintTop_toTopOf="@id/tvLbn" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvExpected,tvPackageId,tvLbn"
+        app:barrierDirection="bottom"/>
+
+    <TextView
+        android:id="@+id/tvPackageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textColor="@color/text_color_blue_dark"
+        android:textSize="@dimen/txt_13"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingBottom="@dimen/margin_4"
+        android:background="@drawable/package_count_background"
+        tools:text="@string/package_count_label"
+        app:layout_constraintStart_toStartOf="@id/tvPackageId"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/labelViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:lineSpacingExtra="3.0dp"
+        android:text="@string/view_customer_details"
+        android:textColor="@color/link_blue"
+        android:textSize="@dimen/txt_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvPackageId"
+        app:layout_constraintTop_toBottomOf="@id/tvPackageCount" />
+
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTaskType"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        tools:text="Deepen Vora - Wing A - 1302, Evershine Cosmic, Behram Baug, Andheri West, Mumbai, Maharashtra 400053" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/border_search"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/margin_16">
+
+    <TextView
+        android:id="@+id/tvRefId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_16"
+        tools:text="Reference id #0088989"
+        android:textColor="@color/text_color_blue"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textSize="@dimen/txt_14"
+        />
+
+    <TextView
+        android:id="@+id/tvLbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="@color/text_color_blue"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_4"
+        tools:text="Package id #0088989"
+        android:textSize="@dimen/txt_14"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/gray_line"/>
+
+    <TextView
+        android:id="@+id/labelSelectReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_blue"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/select_reason"/>
+
+    <RadioGroup
+        android:id="@+id/rgSelectReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rbLost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginStart="@dimen/margin_12"
+            android:text="@string/lost_in_transit"/>
+
+        <RadioButton
+            android:id="@+id/rbDamaged"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/damaged_by_db"
+            android:layout_marginStart="@dimen/margin_16"
+            />
+
+    </RadioGroup>
+
+</LinearLayout>

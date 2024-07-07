@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/off_white">
+
+    <EditText
+            android:id="@+id/edtSearchDelivery"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_38"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_12"
+            android:layout_weight="0.7"
+            android:background="@drawable/border_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/margin_6"
+            android:gravity="center_vertical"
+            android:hint="@string/search_delivery_agent_or_route"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="@dimen/margin_8"
+            android:paddingEnd="@dimen/margin_5"
+            android:textColor="@color/text_color_blue"
+            android:textColorHint="@color/md_blue"
+            android:textSize="@dimen/txt_14" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/margin_38"
+        android:layout_weight="0.1"
+        android:textSize="@dimen/txt_14"
+        android:textColor="@color/md_blue"
+        android:drawableStart="@drawable/ic_launch__glyph"
+        android:paddingStart="6dp"
+        android:paddingEnd="@dimen/margin_5"
+        android:text="@string/date"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:visibility="visible"
+        android:background="@drawable/border_search" />
+
+    <LinearLayout
+        android:id="@+id/llDateSelect"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_38"
+        android:orientation="horizontal"
+        android:layout_weight="0.3"
+        android:paddingStart="6dp"
+        android:paddingEnd="@dimen/margin_5"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:background="@drawable/border_select">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_38"
+            android:textSize="@dimen/txt_14"
+            android:drawableStart="@drawable/ic_calendar2"
+            android:drawablePadding="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_4"
+            android:text="@string/date"
+            android:gravity="center"
+            android:textColor="@color/unassigned_count_text_color"
+             />
+
+        <ImageView
+            android:id="@+id/ivDateClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_blue_24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_4"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

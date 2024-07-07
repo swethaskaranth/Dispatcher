@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+            android:id="@+id/tvCashCollection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cash_collection"
+            android:textSize="@dimen/txt_16"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cashCollection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:layout_constraintBottom_toTopOf="@id/tvChequeCollection"
+            android:background="@drawable/border_search"
+            android:padding="@dimen/margin_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCashCollection"
+            app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/txtCashCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/cash_to_be_collected"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_14"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCashAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintStart_toEndOf="@id/txtCashCollect"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2000" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#cccccc"
+            android:layout_marginStart="@dimen/margin_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtPending"
+            app:layout_constraintBottom_toBottomOf="@id/labelCashDeposit"/>
+
+        <TextView
+            android:id="@+id/txtPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_blue"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_24"
+            android:fontFamily="@font/open_sans_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCashCollect"
+            android:text="@string/pending_from_previous_trip"/>
+
+        <TextView
+            android:id="@+id/tvPendingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintStart_toEndOf="@+id/txtPending"
+            app:layout_constraintTop_toBottomOf="@+id/tvCashAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="100"
+            />
+
+        <TextView
+            android:id="@+id/txtCurrentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/link_blue"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/collected_in_current_trip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPending"/>
+
+        <TextView
+            android:id="@+id/tvCurrentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintHorizontal_bias="0.900"
+            app:layout_constraintStart_toEndOf="@+id/txtCurrentAmount"
+            app:layout_constraintTop_toBottomOf="@+id/tvPendingAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1900"/>
+
+        <TextView
+            android:id="@+id/labelCashDeposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/link_blue"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/less_airtel_cash_deposit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCurrentAmount"/>
+
+        <TextView
+            android:id="@+id/tvCashDeposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_13"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginTop="@dimen/margin_16"
+            app:layout_constraintHorizontal_bias="0.900"
+            app:layout_constraintStart_toEndOf="@+id/labelCashDeposit"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="1900"/>
+
+        <TextView
+            android:id="@+id/txtActualCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/margin_24"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/actual_cash_collected"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelCashDeposit" />
+
+        <EditText
+            android:id="@+id/edtCashCollected"
+            android:layout_width="@dimen/margin_60"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:inputType="number"
+            android:layout_marginTop="@dimen/margin_18"
+            android:background="@drawable/border_search"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:padding="@dimen/margin_4"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.960"
+            app:layout_constraintStart_toEndOf="@+id/txtActualCash"
+            app:layout_constraintTop_toBottomOf="@+id/tvCashDeposit"
+            android:hint="@string/zero" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@color/red_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtCashCollected">
+
+            <TextView
+                android:id="@+id/txtTotalCollection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/reject_red"
+                android:textSize="@dimen/txt_14"
+                android:text="@string/cash_pending_with_sprinter" />
+
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:gravity="end"
+                android:textColor="@color/reject_red"
+                android:textSize="@dimen/txt_18"
+                android:text="@string/zero" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvChequeCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cheque_collection"
+        android:textSize="@dimen/txt_16"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textColor="@color/text_color_blue"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@+id/cashCollection"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chequeCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_search"
+        android:padding="@dimen/margin_2"
+        app:layout_constraintTop_toBottomOf="@+id/tvChequeCollection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/txtChequeCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/cheque_to_be_collected"
+            android:textColor="@color/link_blue"
+            android:textSize="@dimen/txt_14"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvChequeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintStart_toEndOf="@id/txtChequeCollect"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2000" />
+
+        <TextView
+            android:id="@+id/txtActualCheque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/margin_24"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/actual_cheque_amount_collected"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChequeCollect" />
+
+        <EditText
+            android:id="@+id/edtChequeCollected"
+            android:layout_width="@dimen/margin_60"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:inputType="number"
+            android:gravity="end"
+            android:background="@drawable/border_search"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:padding="@dimen/margin_4"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.960"
+            app:layout_constraintStart_toEndOf="@+id/txtActualCheque"
+            app:layout_constraintTop_toBottomOf="@+id/tvChequeAmount"
+            android:hint="@string/zero" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_22"
+            android:background="@color/red_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtChequeCollected">
+
+            <TextView
+                android:id="@+id/txtChequeCollection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/reject_red"
+                android:textSize="@dimen/txt_14"
+                android:text="@string/cheque_mismatch" />
+
+            <TextView
+                android:id="@+id/tvPendingChequeAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:gravity="end"
+                android:textColor="@color/reject_red"
+                android:textSize="@dimen/txt_18"
+                android:text="@string/zero" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/btn_payment_layout"
+        layout="@layout/common_purple_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chequeCollection"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

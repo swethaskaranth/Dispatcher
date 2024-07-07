@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_grey">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:background="@drawable/border_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        >
+
+        <EditText
+            android:id="@+id/tvSearchById"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_40"
+            android:layout_weight="0.9"
+            android:background="@null"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:fontFamily="@font/open_sans_regular"
+            android:drawableStart="@drawable/search_white"
+            android:drawablePadding="@dimen/margin_6"
+            android:gravity="center_vertical"
+            android:hint="@string/search_by_id"
+            android:paddingStart="6dp"
+            android:paddingEnd="@dimen/margin_5"
+            android:textSize="@dimen/txt_14"
+            android:textColor="@color/md_blue"
+            android:textColorHint="@color/md_blue"
+           />
+
+        <ImageView
+            android:id="@+id/ivScanSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0.1"
+            android:padding="@dimen/margin_3"
+            android:src="@drawable/ic_barcode_search"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFilter"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:layout_marginStart="@dimen/margin_8"
+        android:fontFamily="@font/open_sans_regular"
+        android:background="@drawable/border_search"
+        android:drawableStart="@drawable/ic_filters"
+        android:gravity="center"
+        android:paddingStart="6dp"
+        android:paddingEnd="@dimen/margin_5"
+        android:text="@string/filters"
+        android:textSize="@dimen/txt_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="@dimen/margin_10"
+    android:paddingTop="@dimen/margin_12"
+    android:paddingBottom="@dimen/margin_12">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:lineSpacingMultiplier="1.38"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@id/ivEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SHELCAL 500MG TAB 10’S" />
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_edit_dark" />
+
+    <TextView
+        android:id="@+id/tvBatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.36"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="Batch : KHG678" />
+
+    <TextView
+        android:id="@+id/tvReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.36"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBatch"
+        tools:text="Return Reason : Items Near Expiry" />
+
+    <TextView
+        android:id="@+id/tvRejectionReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.36"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReason"
+        tools:text="Rejection : Refrigerated Medicine" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

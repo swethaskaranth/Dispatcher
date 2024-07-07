@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/labelTaskType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/task_type"
+        android:textColor="@color/text_color_blue"
+        android:textSize="@dimen/txt_16" />
+
+    <com.goflash.dispatch.util.RelativeRadioGroup
+        android:id="@+id/rgTaskType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_search"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_10"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/checkDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="onCheckboxClicked"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/delivery"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/checkPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_90"
+            android:onClick="onCheckboxClicked"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/pickup"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/checkFmPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkDelivery"
+            android:layout_alignParentStart="true"
+            android:onClick="onCheckboxClicked"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/fm_pickup"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/checkRTO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkDelivery"
+            android:layout_alignStart="@id/checkPickup"
+            android:onClick="onCheckboxClicked"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/rto"
+            android:layout_marginEnd="@dimen/margin_40"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/checkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/all"
+            android:textColor="@color/text_color_blue"
+            android:layout_below="@+id/checkFmPickup"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_3"
+            android:scaleX="0.9"
+            android:scaleY="0.9" />
+
+    </com.goflash.dispatch.util.RelativeRadioGroup>
+
+
+    <TextView
+        android:id="@+id/txt_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/tags"
+        android:textColor="@color/text_color_blue"
+        android:textSize="@dimen/txt_16"
+        android:visibility="visible" />
+
+    <com.goflash.dispatch.util.RelativeRadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_search"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_10"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/rbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="onTagSelect"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/all"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13" />
+
+        <RadioButton
+            android:id="@+id/rbBlocked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_90"
+            android:onClick="onTagSelect"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/blocked"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            android:visibility="visible" />
+
+
+        <RadioButton
+            android:id="@+id/rbHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbAll"
+            android:layout_alignParentStart="true"
+            android:onClick="onTagSelect"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/high_priority"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/rbPostponed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbBlocked"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_35"
+            android:onClick="onTagSelect"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:text="@string/postpone_request"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            android:visibility="visible" />
+
+    </com.goflash.dispatch.util.RelativeRadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/edd"
+        android:textColor="@color/text_color_blue"
+        android:textSize="@dimen/txt_16" />
+
+    <com.goflash.dispatch.util.RelativeRadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_search"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_10">
+
+        <RadioButton
+            android:id="@+id/rbYesterday"
+            android:layout_width="@dimen/margin_150"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="onRadioButton"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:text="@string/till_yesterday"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:useMaterialThemeColors="false" />
+
+        <RadioButton
+            android:id="@+id/rbTomorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="55dp"
+            android:onClick="onRadioButton"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:text="@string/till_tomorrow"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:useMaterialThemeColors="false" />
+
+
+        <RadioButton
+            android:id="@+id/rbToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbYesterday"
+            android:layout_alignParentStart="true"
+            android:onClick="onRadioButton"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:text="@string/till_today"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:useMaterialThemeColors="false" />
+
+        <RadioButton
+            android:id="@+id/rbAllDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbYesterday"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_120"
+            android:enabled="true"
+            android:onClick="onRadioButton"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:text="@string/all"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:useMaterialThemeColors="false" />
+
+    </com.goflash.dispatch.util.RelativeRadioGroup>
+
+    <TextView
+        android:id="@+id/labelServiceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/service_type"
+        android:textColor="@color/text_color_blue"
+        android:textSize="@dimen/txt_16" />
+
+    <com.goflash.dispatch.ui.customView.MultiSpinnerSearch
+        android:id="@+id/spServiceType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/service_type_spinner_background"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:padding="@dimen/margin_10"/>
+
+    <!--<com.goflash.dispatch.util.RelativeRadioGroup
+        android:id="@+id/rlServiceType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_search"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <RadioButton
+            android:id="@+id/cbB2B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/b2b"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/cbB2C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_100"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/b2c"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/cbB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/cbB2B"
+            android:layout_marginEnd="@dimen/margin_100"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/b3"
+            android:textColor="@color/text_color_blue" />
+
+        <RadioButton
+            android:id="@+id/cbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/cbB2C"
+            android:layout_below="@id/cbB2C"
+            android:layout_marginEnd="@dimen/margin_100"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/all"
+            android:textColor="@color/text_color_blue" />
+
+    </com.goflash.dispatch.util.RelativeRadioGroup>-->
+
+    <TextView
+    android:id="@+id/labelPaymentStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_16"
+    android:fontFamily="sans-serif-medium"
+    android:text="@string/payment_status"
+    android:textColor="@color/text_color_blue"
+    android:textSize="@dimen/txt_16" />
+
+    <RelativeLayout
+    android:id="@+id/rlPaymentStatus"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_40"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:background="@drawable/border_search"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_10">
+
+    <CheckBox
+        android:id="@+id/cbDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/done"
+        android:textColor="@color/text_color_blue" />
+
+    <CheckBox
+        android:id="@+id/cbPending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_80"
+        android:onClick="onCheckboxClicked"
+        android:text="@string/pending"
+        android:textColor="@color/text_color_blue" />
+
+    </RelativeLayout>
+
+
+    </LinearLayout>

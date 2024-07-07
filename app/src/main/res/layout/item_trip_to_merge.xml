@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <RadioButton
+        android:id="@+id/rbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTripId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.38"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_16"
+        android:layout_marginStart="@dimen/margin_9"
+        app:layout_constraintStart_toEndOf="@id/rbSelect"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/rbSelect"
+        tools:text="Trip 123456" />
+
+
+
+
+    <TextView
+        android:id="@+id/tvSprinter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_13"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.69"
+        tools:text="Arpit Varshney"
+        android:layout_marginTop="@dimen/margin_5"
+        app:layout_constraintStart_toStartOf="@id/tvTripId"
+        app:layout_constraintTop_toBottomOf="@id/tvTripId"
+        />
+
+
+    <TextView
+        android:id="@+id/tvShipmentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:background="@drawable/scan_count_background"
+        android:fontFamily="@font/sfui_text_semi_bold"
+        android:gravity="center"
+        android:paddingTop="@dimen/margin_2"
+        android:paddingBottom="@dimen/margin_2"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_5"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/txt_12"
+        app:layout_constraintBottom_toBottomOf="@id/tvTripId"
+        app:layout_constraintStart_toEndOf="@id/tvTripId"
+        app:layout_constraintTop_toTopOf="@id/tvTripId"
+        tools:text="100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

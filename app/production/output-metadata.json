@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.goflash.dispatch",
+  "variantName": "production",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20081,
+      "versionName": "2.5.0",
+      "outputFile": "dispatcher-production-2.5.0.apk"
+    }
+  ],
+  "elementType": "File"
+}

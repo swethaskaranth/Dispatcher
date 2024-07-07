@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = 'com.github.mukeshsolanki'
+
+android {
+  compileSdkVersion 29
+
+  defaultConfig {
+    minSdkVersion 21
+    versionCode 12
+    versionName "2.0.3"
+  }
+
+  signingConfigs {
+    sign {
+      keyAlias KEY_ALIAS
+      keyPassword KEY_PASSWORD
+      storeFile file(project["storeFilePath"])
+      storePassword KEYSTORE_PASSWORD
+    }
+  }
+
+  buildTypes {
+    production {
+      debuggable true
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.sign
+    }
+    debug {
+      debuggable true
+    }
+    dev {
+      debuggable true
+    }
+    staging {
+      debuggable true
+    }
+    release {
+      debuggable true
+    }
+    vapt {
+      debuggable true
+    }
+    localHost {
+      debuggable true
+
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

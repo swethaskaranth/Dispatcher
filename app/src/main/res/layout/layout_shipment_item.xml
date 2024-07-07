@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/priorityCardItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_red">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_border_with_rounded_corners">
+
+            <TextView
+                android:id="@+id/tvTaskType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/open_sana_bold"
+                android:textColor="@color/unassigned_text_color"
+                android:textSize="@dimen/txt_13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Delivery" />
+
+            <TextView
+                android:id="@+id/timeSlot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_12"
+                android:fontFamily="@font/open_sana_bold"
+                android:textSize="@dimen/txt_14"
+                android:textColor="@color/text_color_blue_dark"
+                android:background="@drawable/slot_background"
+                android:paddingStart="@dimen/margin_8"
+                android:paddingEnd="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_4"
+                android:paddingBottom="@dimen/margin_4"
+                android:visibility="gone"
+                tools:text="9 AM - 4 PM"
+                />
+
+
+            <TextView
+                android:id="@+id/tvPackageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textColor="@color/unassigned_text_color"
+                android:textSize="@dimen/txt_13"
+                app:layout_constraintStart_toStartOf="@id/tvTaskType"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskType"
+                tools:text="Package ID #12345678901234" />
+
+            <TextView
+                android:id="@+id/tvLbn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_8"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/unassigned_text_color"
+                android:textSize="@dimen/txt_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPackageId"
+                tools:text="LBN #00889891111" />
+
+            <TextView
+                android:id="@+id/tvBoxCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/link_blue"
+                android:textSize="@dimen/txt_12"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/tvLbn"
+                app:layout_constraintTop_toTopOf="@id/tvLbn"
+                android:text="@string/no_of_boxes" />
+
+            <TextView
+                android:id="@+id/labelViewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_12"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:lineSpacingExtra="3.0dp"
+                android:text="@string/view_customer_details"
+                android:textColor="@color/link_blue"
+                android:textSize="@dimen/txt_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvPackageId"
+                app:layout_constraintTop_toBottomOf="@id/tvLbn" />
+
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_12"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:textColor="@color/FF54698D"
+                android:textSize="@dimen/txt_12"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvTaskType"
+                app:layout_constraintTop_toBottomOf="@id/tvLbn"
+                tools:text="Deepen Vora - Wing A - 1302, Evershine Cosmic, Behram Baug, Andheri West, Mumbai, Maharashtra 400053" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="21dp">
+
+                <ImageView
+                    android:id="@+id/delete_icon"
+                    android:layout_width="@dimen/margin_13"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_55"
+                    android:src="@drawable/ic_delete_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:gravity="end"
+                    android:text="@string/swipe_to_remove"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/txt_13" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

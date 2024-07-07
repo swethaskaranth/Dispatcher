@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.goflash.dispatch.qa",
+  "variantName": "vapt",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20046,
+      "versionName": "2.0.2",
+      "outputFile": "dispatcher-vapt-2.0.2.apk"
+    }
+  ],
+  "elementType": "File"
+}

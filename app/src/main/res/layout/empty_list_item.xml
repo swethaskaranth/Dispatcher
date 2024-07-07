@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8"
+    android:elevation="@dimen/margin_4"
+    app:cardCornerRadius="@dimen/margin_6">
+
+    <LinearLayout
+        android:id="@+id/cancelled_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_search"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/order_id"
+            android:layout_width="@dimen/margin_200"
+            android:layout_height="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/text_color_roboto"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textSize="@dimen/txt_12"
+            android:textStyle="bold"
+            android:background="@color/gray_line"
+             />
+
+        <View
+            android:id="@+id/lbn"
+            android:layout_width="@dimen/margin_150"
+            android:layout_height="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_color_roboto"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textSize="@dimen/txt_12"
+            android:background="@color/gray_line"
+                />
+
+        <View
+            android:layout_width="@dimen/margin_100"
+            android:layout_height="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_color_roboto"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:textSize="@dimen/txt_12"
+            android:background="@color/gray_line"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

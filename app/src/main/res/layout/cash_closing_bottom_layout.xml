@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flSave"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divivder_grey"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:background="@drawable/blue_button_background"
+        android:gravity="center"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/txt_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SUBMIT" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/labelTotalExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="@string/total_expenses"
+        android:textColor="@color/text_color_blue_dark"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_submit" />
+
+
+    <TextView
+        android:id="@+id/tvTotalExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_16"
+        android:textColor="@color/text_color_blue_dark"
+        android:fontFamily="@font/open_sans_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/labelTotalExpense"
+        app:layout_constraintStart_toStartOf="@id/labelTotalExpense"
+        android:text="@string/Rs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

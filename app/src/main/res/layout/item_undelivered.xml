@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:background="@drawable/border_search">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ref_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_5"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textColor="@color/text_color_blue"
+        android:textSize="@dimen/txt_16"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#1233456-wer" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_25"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/margin_8"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textColor="@color/md_blue"
+        android:textSize="@dimen/txt_13"
+        android:paddingBottom="@dimen/margin_8"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@+id/tvPackageCount"
+        tools:text="Ravi Shrivastava" />
+
+    <TextView
+        android:id="@+id/tvPackageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/package_count_background"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_5"
+        android:textColor="@color/text_color_blue_dark"
+        android:textSize="@dimen/txt_13"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/tv_ref_id"
+        app:layout_constraintTop_toBottomOf="@id/tv_ref_id"
+        tools:text="@string/package_count_label" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tv_ref_id,tvPackageCount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+package com.goflash.dispatch.type
+
+enum class PoaType {
+    PHOTO, SIGNATURE, OTP, BARCODE, SOFT_GEOFENCE, HARD_GEOFENCE, CALL_ANSWERED, CALL_ATTEMPTED, VERIFY_CASH_RECEIPT
+}

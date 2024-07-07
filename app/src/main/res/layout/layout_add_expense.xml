@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_16"
+    android:focusableInTouchMode="true"
+    android:focusable="false"
+    android:background="@drawable/border_search">
+
+
+    <TextView
+        android:id="@+id/txtExpenseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12"
+        app:layout_constraintTop_toTopOf="@id/spExpType"
+        app:layout_constraintBottom_toBottomOf="@id/spExpType"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text_color_blue_dark"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.38"
+        android:textSize="@dimen/txt_13"
+        android:text="@string/expense_type" />
+
+    <Spinner
+        android:id="@+id/spExpType"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginEnd="@dimen/margin_11"
+        android:background="@drawable/spinner_in_focus_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVoucherNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12"
+        app:layout_constraintTop_toTopOf="@id/tvVoucherNum"
+        app:layout_constraintBottom_toBottomOf="@id/tvVoucherNum"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text_color_blue_dark"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.38"
+        android:textSize="@dimen/txt_13"
+        android:text="@string/voucher_number" />
+
+    <EditText
+        android:id="@+id/tvVoucherNum"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginEnd="@dimen/margin_11"
+        android:paddingStart="@dimen/margin_9"
+        android:paddingEnd="@dimen/margin_9"
+        android:inputType="text"
+        android:maxLines="1"
+        android:lines="1"
+        android:textSize="@dimen/txt_13"
+        android:imeOptions="actionNext"
+        android:background="@drawable/border_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spExpType" />
+
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12"
+        app:layout_constraintTop_toTopOf="@id/tvAmount"
+        app:layout_constraintBottom_toBottomOf="@id/tvAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text_color_blue_dark"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.38"
+        android:textSize="@dimen/txt_13"
+        android:text="@string/amount_in" />
+
+    <EditText
+        android:id="@+id/tvAmount"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginEnd="@dimen/margin_11"
+        android:inputType="number"
+        android:textSize="@dimen/txt_13"
+        android:paddingStart="@dimen/margin_9"
+        android:paddingEnd="@dimen/margin_9"
+        android:background="@drawable/border_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVoucherNum" />
+
+    <TextView
+        android:id="@+id/txtUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12"
+        app:layout_constraintTop_toTopOf="@id/tvUploadImg"
+        app:layout_constraintBottom_toBottomOf="@id/tvUploadImg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/text_color_blue_dark"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingMultiplier="1.38"
+        android:textSize="@dimen/txt_13"
+        android:text="@string/add_photos" />
+
+    <TextView
+        android:id="@+id/tvUploadImg"
+        android:layout_width="130dp"
+        android:layout_height="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginEnd="@dimen/margin_11"
+        android:text="@string/upload_file"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_13"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:background="@drawable/border_upload_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_show_image"
+        app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+
+    <ImageView
+        android:id="@+id/iv_show_image"
+        android:layout_width="@dimen/margin_70"
+        android:layout_height="@dimen/margin_70"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_add_image"
+        android:layout_marginBottom="@dimen/margin_4"
+        app:layout_constraintStart_toStartOf="@id/txtUpload"
+        app:layout_constraintTop_toBottomOf="@id/tvUploadImg"
+        android:padding="@dimen/margin_2"
+        android:background="@drawable/image_border"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cross"
+        android:visibility="gone"
+        android:translationX="-16dp"
+        android:translationY="16dp"
+        app:layout_constraintStart_toEndOf="@id/iv_show_image"
+        app:layout_constraintBottom_toTopOf="@id/iv_show_image" />
+
+    <TextView
+        android:id="@+id/txtInvalid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:text="@string/please_fill_all_fields"
+        android:textColor="@color/canc_border"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUploadImg"
+        android:layout_marginBottom="@dimen/margin_12"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

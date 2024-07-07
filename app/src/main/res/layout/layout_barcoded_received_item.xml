@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_border_with_rounded_corners">
+
+
+    <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:lineSpacingMultiplier="1.38"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="SHELCAL 500MG TAB 10’S" />
+
+
+    <TextView
+            android:id="@+id/tvBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            tools:text="Batch : KHG678"
+            android:textColor="@color/FF54698D"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+            android:id="@+id/tvReturnQuanityRaised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            tools:text="Return Request : 7"
+            android:textColor="@color/FF54698D"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBatch" />
+
+    <TextView
+            android:id="@+id/tvPickedQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            tools:text="| Picked : 5"
+            android:textColor="@color/FF54698D"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toEndOf="@id/tvReturnQuanityRaised"
+            app:layout_constraintTop_toBottomOf="@id/tvBatch" />
+
+    <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/divivder_grey"
+            app:layout_constraintTop_toBottomOf="@id/tvReturnQuanityRaised" />
+
+    <TextView
+            android:id="@+id/labelReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            android:text="Rejected"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <TextView
+            android:id="@+id/tvReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sana_bold"
+            android:lineSpacingMultiplier="1.33"
+            tools:text="2"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintEnd_toEndOf="@id/labelReject"
+            app:layout_constraintStart_toStartOf="@id/labelReject"
+            app:layout_constraintTop_toBottomOf="@id/labelReject" />
+
+
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="@dimen/divider_ht"
+            android:layout_height="0dp"
+            android:background="@color/border_blue"
+            app:layout_constraintStart_toEndOf="@id/labelAccept"
+            app:layout_constraintEnd_toStartOf="@id/labelReject"
+            app:layout_constraintBottom_toBottomOf="@id/tvReject"
+            app:layout_constraintTop_toTopOf="@id/labelReject"/>
+
+    <TextView
+            android:id="@+id/labelAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            android:text="Accepted"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <TextView
+            android:id="@+id/tvAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sana_bold"
+            android:lineSpacingMultiplier="1.33"
+            tools:text="2"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintEnd_toEndOf="@id/labelAccept"
+            app:layout_constraintStart_toStartOf="@id/labelAccept"
+            app:layout_constraintTop_toBottomOf="@id/labelAccept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/margin_10"/>
+
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="@dimen/divider_ht"
+            android:layout_height="0dp"
+            android:background="@color/border_blue"
+            app:layout_constraintStart_toEndOf="@id/labelReject"
+            app:layout_constraintEnd_toStartOf="@id/labelBalance"
+            app:layout_constraintBottom_toBottomOf="@id/tvReject"
+            app:layout_constraintTop_toTopOf="@id/labelReject"/>
+
+    <TextView
+            android:id="@+id/labelBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_36"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            android:text="Balance"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <TextView
+        android:id="@+id/tvReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:lineSpacingMultiplier="1.33"
+        android:text="Review"
+        android:textColor="@color/unassigned_count_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintEnd_toEndOf="@id/labelBalance"
+        app:layout_constraintStart_toStartOf="@id/labelBalance"
+        app:layout_constraintBottom_toBottomOf="@id/tvReject"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/tvReject"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

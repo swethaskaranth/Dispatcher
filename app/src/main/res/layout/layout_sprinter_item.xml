@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvSprinter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:fontFamily="@font/open_sans_regular"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_14"
+        android:gravity="start"
+        android:layout_marginEnd="@dimen/margin_8"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvRestrictionReason"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Automation Sprinter DW2MOVBGYHKU" />
+
+    <TextView
+        android:id="@+id/tvRestrictionReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:fontFamily="@font/open_sans_regular"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8"
+        android:textColor="@color/canc_border"
+        android:textSize="@dimen/txt_14"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSprinter"
+        tools:text="Pending Outstanding Amount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

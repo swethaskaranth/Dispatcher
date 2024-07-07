@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_17"
+        android:layout_marginTop="@dimen/margin_11"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTripId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_13"
+        android:fontFamily="@font/open_sans_semi_bold"
+        tools:text="Trip_123456"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toEndOf="@id/cbSelect"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSprinter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:fontFamily="@font/open_sans_semi_bold"
+        tools:text="(THEA_BLR) - Ramesh Kumar"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_11"
+        app:layout_constraintStart_toStartOf="@id/tvTripId"
+        app:layout_constraintTop_toBottomOf="@id/tvTripId" />
+
+
+    <TextView
+        android:id="@+id/tvDispatchTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:fontFamily="@font/open_sans_italic"
+        tools:text="Dispatch Time: 08-01-21 | 10.30 am"
+        android:textColor="@color/FF54698D"
+        android:textSize="@dimen/txt_11"
+        app:layout_constraintStart_toStartOf="@id/tvSprinter"
+        app:layout_constraintTop_toBottomOf="@id/tvSprinter" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sana_bold"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_20"
+        app:layout_constraintTop_toTopOf="@id/tvTripId"
+        app:layout_constraintBottom_toBottomOf="@id/tvDispatchTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_22"
+        tools:text="30 " />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@color/divivder_grey"
+        app:layout_constraintTop_toBottomOf="@id/tvDispatchTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

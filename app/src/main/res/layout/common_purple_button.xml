@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flSave"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divivder_grey"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <TextView
+        android:id="@+id/btn_payment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/blue_button_background"
+        android:gravity="center"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textAllCaps="true"
+        tools:text="SUBMIT"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/txt_16"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_12"
+        android:layout_marginTop="@dimen/margin_12"/>
+
+</FrameLayout>
+
+
+
+

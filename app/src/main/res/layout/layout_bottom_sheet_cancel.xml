@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme">
+
+    <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/are_you_sure_you_want_to_cancel_the_order"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_5"
+            android:lineSpacingExtra="18sp"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label"
+            android:text="@string/ref_id" />
+
+    <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_ht"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="#e5e8f4"
+            app:layout_constraintTop_toBottomOf="@id/tv_text" />
+
+    <TextView
+            android:id="@+id/labelSelectReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_13"
+            android:layout_marginStart="@dimen/margin_17"
+            android:textSize="@dimen/txt_14"
+            android:textColor="@color/unassigned_text_color"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/select_reason_for_cancelling" />
+
+    <RadioGroup
+        android:id="@+id/rvCancelReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/labelSelectReason"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_16">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_14"
+            android:text="@string/damaged"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_14"
+            android:text="@string/out_of_service_area"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_14"
+            android:text="@string/wrong_pincode"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_14"
+            android:text="@string/lost"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_regular"/>
+
+    </RadioGroup>
+
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_ht"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="#e5e8f4"
+            app:layout_constraintTop_toBottomOf="@id/rvCancelReason" />
+
+    <View
+            android:id="@+id/verticalView"
+            android:layout_width="@dimen/divider_ht"
+            android:layout_height="0dp"
+            android:background="#e5e8f4"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="@id/tvDismiss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <TextView
+            android:id="@+id/tvYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/verticalView"
+            android:fontFamily="@font/open_sana_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="8sp"
+            android:padding="@dimen/margin_10"
+            android:text="@string/yes_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/verticalView"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <TextView
+            android:id="@+id/tvDismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:lineSpacingExtra="8sp"
+            android:padding="@dimen/margin_10"
+            android:text="@string/no_dont_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/verticalView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

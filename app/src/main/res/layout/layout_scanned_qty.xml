@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/inc_scanned"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scanned_bags"
+        android:textColor="@color/text_color_blue"
+        android:textSize="@dimen/txt_16"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_scanned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_scanned"
+        />
+
+</LinearLayout>

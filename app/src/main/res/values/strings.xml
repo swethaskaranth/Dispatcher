@@ -1,0 +1,597 @@
+
+<resources>
+    <string name="app_name">Dispatcher</string>
+
+    <string name="server_client_id">691973606282-r3o6af8t6k9c6g2ogrl38ijud7js7fau.apps.googleusercontent.com</string>
+
+    <string name="waiting">Please wait…</string>
+    <string name="unable_to_process">Unable to process. Try again</string>
+    <string name="session_expired">Session Expired. Please Re-login</string>
+    <string name="request_timeout">Request timeout. Try again</string>
+    <string name="network_error">No Internet Connection. Try again</string>
+    <string name="ok">OK</string>
+
+    <string name="switch_roles">Switch Roles</string>
+    <string name="sortation">Sortation</string>
+    <string name="dispatch_from_store">Dispatch from Store</string>
+    <string name="logout">Logout</string>
+
+
+    <string name="scan_delivery_label">Scan Delivery Label</string>
+    <string name="scan_bin_delivery_label">Scan Bin / Delivery Label</string>
+
+    <string name="scan_bin_number">Scan Bin Number</string>
+    <string name="scan_bin">Scan Bin</string>
+
+    <string name="bin_no">Bin No</string>
+    <string name="list_of_orders">List of Orders</string>
+
+    <string name="dispatch">Dispatch</string>
+    <string name="proceed">Proceed</string>
+
+
+    <string name="no_of_orders_scanned">No. of Orders Scanned</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+
+    <string name="login_failed">Login Failed</string>
+
+    <string name="task_completed">Task Completed Successfully</string>
+    <string name="nondispatchable_order">%s Order</string>
+    <string name="not_authorized">You are not authorized.</string>
+    <string name="cannot_go_back">Cannot Go Back</string>
+    <string name="invalid_bin">Invalid Bin</string>
+    <string name="view_details">View details</string>
+
+    <string name="cancelled_orders_present">There are Cancelled Orders. Please remove them.</string>
+
+    <string name="todays_tasks">Today\'s Tasks</string>
+    <string name="sort_and_bagged">Sort &amp; Bagged</string>
+    <string name="sort_and_bag">Sort &amp; Bag</string>
+    <string name="dispatched">Dispatched</string>
+    <string name="received">Received</string>
+    <string name="tasks">Tasks</string>
+    <string name="receive_bags">Receive Bags</string>
+    <string name="invoice_list">Invoice List</string>
+    <string name="close_bag">Close Bag</string>
+    <string name="search_by_bag_id">Search by Bag ID</string>
+    <string name="bags_label">Bags (%d)</string>
+    <string name="scanned_shipments">Scanned Shipments</string>
+    <string name="shipments">Shipments (%d)</string>
+    <string name="scan_seal_barcode">Scan Seal Barcode</string>
+    <string name="complete_task">Complete Task</string>
+    <string name="pharmeasy">Pharmeasy</string>
+    <string name="scan_shipment">Scan Shipment</string>
+    <string name="bin_empty_message">If Bin is Empty, Put Empty Bag inside the bin</string>
+    <string name="scan_bin_for_close_bag">Scan Bin for which Bag has to be closed</string>
+    <string name="scan_shipment_barcode">Scan Shipment Barcode</string>
+    <string name="scan_to_remove_shipments">Scan to Remove Shipments</string>
+    <string name="scan_to_remove_bags">Scan to Remove Bags</string>
+    <string name="bag_listing">Bag Listing</string>
+    <string name="select_destination">Select Destination</string>
+    <string name="discard_bag">Discard Bag</string>
+    <string name="scan_sealed_successfully">Scan Sealed Successfully</string>
+    <string name="scan_label">Scan Label</string>
+    <string name="if_vehicle_seal_is_lost">If vehicle seal is lost</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="scan_vehicle">Scan Vehicle Seal</string>
+    <string name="expected">Expected Consignment</string>
+    <string name="preview">Preview</string>
+    <string name="proof_of_vehicle_seal_loss">Proof of Vehicle Seal Loss</string>
+    <string name="pending_review">Pending Review</string>
+    <string name="excess_quantity">Excess Quantity</string>
+    <string name="scanned_quantity">Scanned Quantity / Shipments</string>
+    <string name="mark_as_excess">Mark as Excess</string>
+    <string name="complete">Complete</string>
+    <string name="add_bags">Add Bags</string>
+    <string name="scanned_bags">Scanned Bags</string>
+
+    <string name="scan_bag_barcode">Scan Bag Barcode</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="driver">Driver</string>
+    <string name="vehicle_and_driver_details">Vehicle &amp; Driver Details</string>
+    <string name="print_consignment_label">Print Consolidated Invoice</string>
+    <string name="print_consignment_label_for">Print Consolidated Invoice for</string>
+    <string name="select_driver">Select Driver</string>
+    <string name="scan_vehicle_seal">Scan Vehicle Seal</string>
+    <string name="search_by_invoice_number">Search by Invoice Number</string>
+    <string name="invoices_label">Invoices (%d)</string>
+    <string name="trip_listing">Trip Listing</string>
+    <string name="no_bags_found">No Bags Found</string>
+    <string name="select_reason">Select Reason</string>
+    <string name="damaged_barcode">Damaged Barcode</string>
+    <string name="bag_not_received">Bag Not Received</string>
+
+    <string name="sort_and_bag_count">%1$d Bags | %2$d Shipments</string>
+    <string name="dispatched_count">%1$d Trips</string>
+    <string name="received_count">%1$d Bags | %2$d Shipments</string>
+    <string name="my_profile">My Profile</string>
+    <string name="please_select">Please select valid reason</string>
+    <string name="summary">Summary Details</string>
+    <string name="summary_With_asset">Summary Details - %1$s</string>
+    <string name="no_of_bags_scanned">No. of bags scanned</string>
+    <string name="bag_id_and_destination">Bag ID: %1$s | Destination: %2$s</string>
+    <string name="bag_destination">Bag Destination : %1$s</string>
+    <string name="excess_bag">Excess Bag</string>
+
+    <string name="discard_bag_message">Are you sure you want to discard the bag?</string>
+    <string name="discard_dispatch_message">Going back to Home screen will remove scanned Bags from this Trip. Do you want to proceed?</string>
+    <string name="received_bags_shipments">Received (%1$d Bags | %2$d Shipments)</string>
+    <string name="shipments_label">Shipments</string>
+    <string name="bag_id">BAG ID</string>
+    <string name="consignment_detail">Consignment Detail</string>
+    <string name="received_consignments">Received Consignments</string>
+    <string name="dismiss">Dismss</string>
+    <string name="yes">Yes</string>
+    <string name="audit">Audit</string>
+    <string name="begin_audit">Start Audit</string>
+    <string name="hi_name">Hi %1$s!</string>
+    <string name="start_a_new_audit">You can start a new Audit now</string>
+    <string name="scan_bag">Scan Bag / Shipment</string>
+    <string name="tems_scanned">Items scanned</string>
+    <string name="bags">Bags</string>
+    <string name="done">Done</string>
+    <string name="complete_audit">Complete Audit</string>
+    <string name="scan_bags">Scan Bags</string>
+    <string name="extra_bag_s">Extra Bag(s)</string>
+    <string name="short_bag_s">Missing Bag(s)</string>
+    <string name="extra_shipments">Extra Shipments</string>
+    <string name="missing_shipments">Missing Shipments</string>
+    <string name="audit_for">Audit for %1$s</string>
+    <string name="bag_scanned_count">%1$d / %2$d</string>
+    <string name="default_error_message">Smething is not right here</string>
+    <string name="audit_complete_title">Complete Audit</string>
+    <string name="audit_complete_message">Do you want to End this Audit? You can check Audit Summary from the history in 5 mins</string>
+    <string name="cancel">Cancel</string>
+    <string name="audit_history">Audit History - %1$s</string>
+
+    <string name="audit_inactive_title">Expired/Inactive Audit</string>
+    <string name="audit_inactive_message">The Audit has expired. Please start a new Audit</string>
+
+    <string name="audit_active_title">Audit Active</string>
+    <string name="audit_active_message">There is an Active Audit. Please complete the Audit.</string>
+    <string name="trip_id">Trip ID:</string>
+    <string name="create_trip_title">Create Trip</string>
+    <string name="create_trip_message">Do you want to continue with creating the trip with %1$s ?</string>
+    <string name="create_bag_title">Create Bag</string>
+    <string name="create_bag_message">Do you want to continue with creating the bag with %1$s ?</string>
+
+    <string name="reference_id_label">Ref ID #%1$s</string>
+    <string name="package_id_label">Package ID #%1$s</string>
+    <string name="lbn_label">LBN #%1$s</string>
+    <string name="back">Back</string>
+    <string name="confirm">Confirm</string>
+    <string name="start_audit">Start Audit?</string>
+    <string name="start_audit_confirm">Once Audit is initiated, all other activities will be blocked at the center. Do you want to start Audit?</string>
+    <string name="trip_created_with">Trip Created with</string>
+    <string name="trip">Trip ID - %1$s</string>
+    <string name="dispatched_trip">Dispatched Trip</string>
+    <string name="continue_audit">Continue Audit</string>
+
+    <string name="audit_in_progress">Audit is in progress</string>
+    <string name="created_time">Created Time : %1$s</string>
+    <string name="audit_username">Username : %1$s</string>
+
+    <string name="upload_photo">Upload Screenshot/Images</string>
+    <string name="add_photo">Add Photo(s)</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="cc">cc</string>
+    <string name="raise_ticket">Raise Ticket</string>
+    <string name="submit">Submit</string>
+    <string name="comm_error">Not able to select image</string>
+
+    <string name="mercury">https://store.mercuryonline.co/api/support/ticket/create</string>
+    <string name="select_capture_image">Please select or capture image</string>
+    <string name="ticket_created">Ticket Created</string>
+    <string name="details_will_be_reviewed_by_the_concerned_team">Details will be reviewed by the concerned team</string>
+    <string name="enter_comma_separated_email_id_s">Enter comma separated email ID’s</string>
+    <string name="cc_enter_comma_separated_email_id_s">CC (Enter comma separated email ID’s)</string>
+
+    <string name="last_mile">Last Mile Trips</string>
+    <string name="search_delivery_agent">Search Delivery Agent</string>
+    <string name="search_delivery_agent_or_route">Search Delivery Agent / Route ID</string>
+    <string name="date">Date</string>
+    <string name="unassigned_shipments">Unassigned Shipments</string>
+    <string name="assign_zones">Assign Zones</string>
+    <string name="edit_delivery_agent">Edit Delivery Agent</string>
+    <string name="add_delivery_agent">Add Delivery Agent</string>
+    <string name="settle_trip">Settle Trip</string>
+    <string name="call_delivery_agent">Call Delivery Agent</string>
+    <string name="trip_summary">Trip Summary</string>
+    <string name="Rs">\u20B9</string>
+    <string name="cash_in_hand">Cash in Hand</string>
+    <string name="completed_tasks">Completed Tasks</string>
+    <string name="incomplete_tasks">Incomplete Tasks</string>
+    <string name="search_by_id">Search by ID</string>
+    <string name="filters">Filters</string>
+    <string name="scan_barcode_to_add_remove_shipment">Scan Barcode to Add / Remove Shipment</string>
+    <string name="save">SAVE</string>
+    <string name="select_from_the_list">Select from the list</string>
+    <string name="shipments_in_the_trip">Shipments in the trip</string>
+    <string name="search_pincode">Search Pincode</string>
+    <string name="add_shipments">Add Shipments</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="are_you_sure_you_want_to_cancel_the_order">Are you sure you want to cancel the order ?</string>
+    <string name="ref_id">Reference Id <b>#6168161900001-BK7G</b></string>
+    <string name="yes_cancel">Yes, Cancel</string>
+    <string name="no_dont_cancel">No, Don\'t Cancel</string>
+    <string name="delivery">Delivery</string>
+    <string name="pickup">Pickup</string>
+    <string name="edd">EDD</string>
+    <string name="till_yesterday">Till Yesterday</string>
+    <string name="till_today">Till Today</string>
+    <string name="all">All</string>
+    <string name="till_tomorrow">Till Tomorrow</string>
+    <string name="tags">Tags</string>
+    <string name="blocked">Blocked</string>
+    <string name="high_priority">High Priority</string>
+    <string name="postpone_request">Postpone Request</string>
+    <string name="title_activity_scan_shipment">ScanShipmentActivity</string>
+    <string name="select_sprinter">Select Sprinter</string>
+    <string name="select_sprinters">Select Sprinter(s)</string>
+    <string name="trip_number">Trip #%1$d</string>
+    <string name="swipe_to_remove">Swipe to remove</string>
+    <string name="add_shipments_with_count">Add Shipments (%1$d)</string>
+    <string name="out_of_service_area">Out of Service Area</string>
+    <string name="damaged">Damaged</string>
+    <string name="wrong_pincode">Wrong Pincode</string>
+    <string name="select_reason_for_cancelling">Select Reason for Cancelling</string>
+    <string name="do_you_want_to_unlock_this_order_for_assignment_to_trip">Do you want to unlock this order for assignment to Trip?</string>
+    <string name="no">NO</string>
+    <string name="clear_all">CLEAR ALL</string>
+
+    <string name="mandatory_call_permission">You need to allow access to make this call.</string>
+
+    <string name="cash_in_hand_text">\u20B9 %d</string>
+    <string name="cash_in_hand_text_formatted">\u20B9 %s</string>
+    <string name="rs_text">\u20B9 %d</string>
+    <string name="customer_not_at_home">Customer Not At Home</string>
+    <string name="unattempted">UNATTMEMPTED</string>
+    <string name="customer_not_available">CUSTOMER NOT AVAILABLE</string>
+
+    <string name="order_id_label">Reference ID #%1$s</string>
+    <string name="cancelled_by_customer">Cancelled by customer</string>
+    <string name="delivered">Delivered</string>
+    <string name="picked_up">Picked Up</string>
+    <string name="order_blocked">Order Blocked</string>
+    <string name="task_type">Task Type</string>
+    <string name="create_manual_trip">CREATE MANUAL TRIP</string>
+    <string name="high_priority_braces">(High Priority)</string>
+    <string name="postponed">(Postponed)</string>
+    <string name="blocked_braces">(Order Blocked)</string>
+    <string name="accept">ACCEPT</string>
+    <string name="reject">REJECT</string>
+    <string name="refrigerated_medicine">Refrigerated Medicine</string>
+    <string name="wrong_batch">Wrong Batch</string>
+    <string name="wrong_medicine">Wrong Medicine</string>
+    <string name="doesn_t_belong_to_the_order">Doesn\'t belong to the order</string>
+    <string name="item_received_summary_header">Item Received Summary #%1$s</string>
+    <string name="fm_pickup_summary">FM Pickup Summary</string>
+    <string name="ref_name"><![CDATA[Reference ID]]></string>
+    <string name="amount">Amount</string>
+    <string name="cash_collection_breakup">Cash Collection Breakup</string>
+    <string name="accepted">Accepted</string>
+    <string name="rejected">Rejected</string>
+    <string name="shipment_received">Shipment Received</string>
+    <string name="trip_id_with_sprinter">Trip #%1$d - %2$s</string>
+    <string name="reference_id">Reference Id #%1$s</string>
+    <string name="scan_items_in_shipment">Scan Items in Shipment #%1$s</string>
+    <string name="cash_to_be_collected">Cash to be collected</string>
+    <string name="actual_cash_collected">Actual cash collected</string>
+    <string name="cash_collection">Cash Collection</string>
+    <string name="cheque_collection">Cheque/Netbanking Collection</string>
+    <string name="cheque_to_be_collected">Cheque/Netbanking Amount to be collected</string>
+    <string name="trip_settled">Trip Settled</string>
+    <string name="congratulations">Congratulations !!</string>
+
+    <string name="items_received">Items received</string>
+    <string name="return_reason">Return Reason : %1$s</string>
+    <string name="batch_number">Batch : %1$s</string>
+    <string name="rejection_reason">Rejection : %1$s</string>
+    <string name="return_request_quantity">Return Request : %1$d</string>
+    <string name="picked_quantity">| Picked : %1$d</string>
+    <string name="review_items">Review Items</string>
+    <string name="review"><u>Review</u></string>
+    <string name="reviewed">Reviewed</string>
+    <string name="scan_next_shipment">Scan Next Shipment</string>
+    <string name="review_balance_medicines">Review Balance Medicines</string>
+    <string name="shipment_id">Shipment #%1$s</string>
+    <string name="delivered_without_barcode">Delivered without barcode</string>
+    <string name="damaged_medicine">Damaged Medicine</string>
+    <string name="lost_damaged_by_db">Lost/Damaged by DB</string>
+    <string name="customer_did_not_receive_the_medicine">Customer did not receive the medicine</string>
+    <string name="select_rejection_reason">Select Rejection Reason</string>
+    <string name="select_accept_reason">Select Accept Reason</string>
+    <string name="bin_id">Bin ID:</string>
+
+    <string-array name="accept_reason">
+        <item>Select Reason</item>
+        <item>Delivered without barcode</item>
+        <item>Damaged Medicine</item>
+        <item>Lost/Damaged by DB</item>
+        <item>Customer did not receive the medicine</item>
+        <item>Received</item>
+    </string-array>
+
+    <string-array name="reject_reason">
+        <item>Select Reason</item>
+        <item>Wrong batch</item>
+        <item>Wrong medicine</item>
+        <item>Refrigerated medicine</item>
+        <item>Medicine does not belong to this order</item>
+    </string-array>
+
+    <string name="scan_picked_up_shipments">Scan Picked-up Shipments</string>
+    <string name="reason_cancelled_by_customer">Reason: Cancelled by Customer</string>
+    <string name="reason_unattempted">Reason: Unattempted</string>
+    <string name="reason_postponed">Reason: Postponed</string>
+    <string name="reason_customer_not_available">Reason: Customer not available</string>
+    <string name="reason_blocked">Reason: Blocked</string>
+    <string name="reason_cancelled">Reason: Cancelled</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="step3">Trip Settlement (3/3)</string>
+    <string name="pending_from_previous_trip">Pending from previous trip</string>
+    <string name="collected_in_current_trip">Collected in current trip</string>
+    <string name="cash_pending_with_sprinter">Cash pending with sprinter</string>
+    <string name="zero">0</string>
+    <string name="lost_in_transit">Lost in Transit</string>
+    <string name="damaged_by_db">Damaged by DB</string>
+    <string name="select_reason_for_shipments_not_received">Select Reason for shipments not received</string>
+    <string name="scan_undelivered_shipments">Scan Undelivered Shipments</string>
+    <string name="unscanned_shipment">Please select reasons for all unscanned shipements</string>
+    <string name="received_undelivered">Receive Undelivered Shipments</string>
+    <string name="received_picked">Received Picked-Up Shipments</string>
+    <string name="received_fm_picked">Receive FM Pickup Shipments</string>
+    <string name="review_balance_shipments">Review Balance Shipments</string>
+    <string name="create_trips">Create Trips</string>
+    <string name="merge_zones">MERGE ZONES</string>
+
+    <string name="set_bold">Order ID <b>%s</b> is postponed for <b>%s</b></string>
+    <string name="select_all">SELECT ALL</string>
+    <string name="de_merge">De-merge</string>
+    <string name="zone_names">Zone : %1$s</string>
+    <string name="search_sprinters">Search Sprinters</string>
+    <string name="cancel_trip">Cancel Trip</string>
+    <string name="cheque_mismatch">Cheque/Netbanking Mismatch</string>
+    <string name="actual_cheque_amount_collected">Actual Cheque/Netbanking Amount Collected</string>
+    <string name="no_trips_available">No trips available</string>
+    <string name="reset">RESET</string>
+    <string name="lost">Lost</string>
+    <string name="remove_shipment_title">Remove Shipment</string>
+    <string name="remove_shipment_message">Are you sure you want to remove %1$s from the trip?</string>
+    <string name="cancel_caps">CANCEL</string>
+
+    <string name="update">Update</string>
+
+    <string name="select_priority">Select Priority</string>
+    <string name="title_activity_cash_closing">CashClosingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="cash_closing">Cash Closing</string>
+    <string name="opening_balance">Opening Balance</string>
+    <string name="total_cash_collected">Total Cash Collected</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="expenses">Expenses</string>
+    <string name="add_expense">Add Expenses</string>
+    <string name="cash_pickup">Cash Pickup</string>
+    <string name="add_cash_pick_up">Add Cash Pickup</string>
+    <string name="add_cash_picked_up">Add Cash Picked up</string>
+    <string name="expense_type">Expense Type</string>
+    <string name="voucher_number">Voucher Number</string>
+    <string name="add_photos">Add Photos</string>
+    <string name="upload_photo_s">Upload Photo(s)</string>
+    <string name="amount_in">Amount in (\u20B9)</string>
+    <string name="add_more">Add More</string>
+    <string name="total_expenses">Total Expenses (%1$d)</string>
+    <string name="closing_id">Closing Id</string>
+    <string name="cash_collected">Cash Collected</string>
+    <string name="amount_deposited">Amount Deposited</string>
+    <string name="denomination_of_cash_pickup">Denomination of Cash Pickup</string>
+    <string name="denomination">Denomination</string>
+    <string name="notes">Notes</string>
+    <string name="_200">200</string>
+    <string name="_2000">2000</string>
+    <string name="_500">500</string>
+    <string name="_10">10</string>
+    <string name="_20">20</string>
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_5">5</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="cash_receipt_number">Cash Receipt Number</string>
+    <string name="upload_reciepts">Upload Reciepts</string>
+    <string name="total_cash_picked_up">Total Cash Picked-up</string>
+    <string name="create">CREATE</string>
+    <string name="please_fill_all_fields">Please fill all fields</string>
+    <string name="receipt_num_attachment_reqd">Receipt No and attachment are required.</string>
+    <string name="create_summary">Create Summary</string>
+    <string name="cash_closing_balance">Cash Closing Balance</string>
+    <string name="upload_image">Image</string>
+    <string name="upload_pdf">PDF</string>
+    <string name="choose_file_type">Choose File Type</string>
+    <string name="pdf_error">Not able to select PDF</string>
+    <string name="are_you_sure_you_want_to_xa_delete_this_trip">Are you sure you want to \nDelete this Trip ?</string>
+    <string name="confirm_create_summary">Are you sure you want to\n  Create Summary ?</string>
+    <string name="upload_file">Upload File</string>
+    <string name="upload">Upload</string>
+    <string name="reference_number">Reference Number</string>
+    <string name="upi_reference_number">UPI Reference Number</string>
+
+    <string-array name="expense_type">
+        <item>Select</item>
+        <item>Tea/Coffee</item>
+        <item>Utilities</item>
+        <item>Stationary</item>
+        <item>Infra Setup</item>
+        <item>Others</item>
+    </string-array>
+    <string name="initiated_by">Initiated By - </string>
+    <string name="scanned_barcode">Scanned Barcode :</string>
+
+    <string name="select_reason_for_non_deliverable_shipment">Select reason for Non-Deliverable Shipment</string>
+    <string name="out_of_serviceable_area">Out of Serviceable Area</string>
+    <string name="close">Close</string>
+    <string name="damaged_reason">Cancel the shipment due to shipment Damage ?</string>
+
+    <string name="lost_reason">Cancel the shipment due to shipment is Lost?</string>
+    <string name="serviceable_reason">Cancel the shipment with OSA reason?</string>
+    <string name="enter_the_correct_pincode_for_the_shipment_s_address">Enter the correct pincode for the shipment’s address</string>
+    <string name="enter_the_pincode">Enter the pincode</string>
+    <string name="update_caps">UPDATE</string>
+    <string name="serviceable_from_the_existing_dc">The shipment is serviceable from the existing DC as per updated Pincode</string>
+    <string name="verify">Verify</string>
+    <string name="belong_to_different_asset">The shipment is serviceable and is belong to different DC as per updated Pincode</string>
+    <string name="not_serviceable">Cancel the shipment with Wrong Pincode reason?</string>
+    <string name="change"><u>Change</u></string>
+    <string name="includes_in_transit">Includes shipments from %1$d In-transit trips.</string>
+    <string name="select_in_transit_trip_s">Select In-transit trip(s)</string>
+    <string name="note_selecting_in_transit_trips_will_also_include_it_s_shipments">Note: Selecting In-transit trips will also include it’s shipments</string>
+    <string name="in_transit_asset_and_sprinter">(%1$s) - %2$s</string>
+    <string name="dispatch_time">Dispatch Time: %1$s</string>
+
+    <string name="less_airtel_cash_deposit">Less: Airtel Cash Deposit</string>
+    <string name="airtel_cash_deposit">Airtel Cash Deposit</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="select_a_trip_to_which_shipments_will_be_added">Select a Trip to which shipments will be added</string>
+    <string name="merge_trip">Merge Trip</string>
+    <string name="merge_t0">Merge To</string>
+    <string name="merge">Merge</string>
+    <string name="search_by_tripid_or_sprinter_name">Search by Trip ID, Sprinter name</string>
+    <string name="trip_with_id">Trip %1$d</string>
+
+    <string name="summary_in_progress">Summary in Process</string>
+    <string name="summary_in_progress_message">Audit Summary is being processed. Please check back after 5 mins</string>
+
+    <string name="service_type">Service type</string>
+    <string name="b2b">B2B</string>
+    <string name="b2c">B2C</string>
+
+    <string name="no_of_boxes">%1$d Boxes</string>
+
+    <string name="view_customer_details"><u>View Customer Details</u></string>
+    <string name="select_the_boxes_which_are_lost">Select the Boxes which are lost ?</string>
+    <string name="select_the_boxes_which_are_damaged">Select the Boxes which are damaged ?</string>
+
+    <string name="ref_id_label">Reference ID</string>
+    <string name="lbn">LBN</string>
+    <string name="_no_boxes_in_this_shipment">%1$d Boxes in this shipment</string>
+    <string name="undelivered_mps_shipments">Undelivered MPS Shipments</string>
+
+    <string name="trip_completed">Trip Already Completed</string>
+
+    <string name="shipment_already_scanned">Shipment Already Scanned</string>
+    <string name="please_try_scanning_another_shipment">Please try scanning another shipment</string>
+    <string name="is_already_scanned">\"%1$s\" is already scanned</string>
+    <string name="fm_pickup">FM Pickup</string>
+    <string name="payment_status">Payment Status</string>
+    <string name="pending">Pending</string>
+    <string name="cheque_breakup">Cheque/Netbanking Breakup</string>
+
+    <string name="trip_details">Trip Details</string>
+    <string name="amount_collected">Amount Collected</string>
+    <string name="recon_time">Recon: %1$s</string>
+    <string name="no_cash_collection_breakup_found">No cash collection breakup found</string>
+
+    <string name="rto">RTO</string>
+    <string name="b3">B3</string>
+    <string name="select_mode_of_transport">Select Mode of Transport</string>
+    <string name="road">Road</string>
+    <string name="other">Other</string>
+    <string name="assign_driver">Assign Driver</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="no_vehicle_mapped">No Vehicle Mapped</string>
+    <string name="enter_vehicle_number">Enter Vehicle Number</string>
+    <string name="vehicle_mapped_successfully">Vehicle Mapped Successfully</string>
+    <string name="sorry">SORRY !!</string>
+    <string name="app_under_maintenance">The app is under maintenance right now. \nPlease try again after sometime.</string>
+
+    <string name="receive_shipments">Receive Shipments</string>
+    <string name="receiving_history_past_n_days">Receiving History (Past %1$d days)</string>
+    <string name="start_receiving">Start Receiving</string>
+    <string name="scanned_items">Scanned Items</string>
+    <string name="having_problem_scanning">Having problem scanning?</string>
+    <string name="click_here">Click Here</string>
+    <string name="raise_issue_for_awb">Raise Issue for %1$s</string>
+    <string name="rto_cancelled">RTO - Cancelled</string>
+    <string name="tampered">Tampered</string>
+    <string name="missing_medicine">Missing Medicine</string>
+    <string name="wrong_parcel">Wrong Parcel</string>
+    <string name="enter_awb_lbn_ref_id">Enter AWB / LBN / Ref ID</string>
+    <string name="awb_lbn_ref_id">AWB / Reference ID / LBN</string>
+    <string name="scan_awb_lbn_refId">Scan AWB / LBN / Ref ID to receive</string>
+    <string name="mps_count">+%1$d more</string>
+    <string name="total_items">Total Items</string>
+    <string name="print_courier_runsheet">Print Runsheet</string>
+    <string name="runsheet_for">Runsheet for %1$s</string>
+    <string name="status">Status</string>
+    <string name="scanned_shipments_count">Scanned Shipments (%1$d)</string>
+    <string name="are_you_sure_you_want_to_complete_this_task">Are you sure you want to complete this task ?</string>
+    <string name="mps_item_ref_id">%1$s (%2$d/%3$d)</string>
+    <string name="awb_ref_id_lbn">AWB / Reference ID / LBN</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="get_otp">GET OTP</string>
+    <string name="incorrect_number_please_try_again">Incorrect number, please try again</string>
+    <string name="or">OR</string>
+    <string name="request_otp">Request OTP in %1$ds</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="login_via_mobile_number">Login via mobile number</string>
+    <string name="incorrect_otp_please_try_again">Incorrect OTP, please try again</string>
+    <string name="invalid_access">User does not have permission to login</string>
+    <string name="scanned_orders">Recently Scanned</string>
+    <string name="drop_shipment_in_bin">Drop Shipment in Bin</string>
+    <string name="package_id_">Package ID:</string>
+    <string name="lbn_">Lbn:</string>
+    <string name="reference_id_">Reference ID:</string>
+    <string name="search_by_vehicle_id">Search by Vehicle Seal</string>
+    <string name="upload_images">Upload images</string>
+    <string name="review_orders">Review Orders</string>
+    <string name="select_images">Select Images</string>
+    <string name="review_and_select_message">Review and select images that are clear</string>
+    <string name="approve_with_count">Approve Images (%1$d)</string>
+    <string name="approve">Approve Images</string>
+    <string name="approve_image">Approve Image</string>
+    <string name="verify_pod_images">Verify POD Images</string>
+    <string name="approved_count_text">%1$d/%2$d approved </string>
+    <string name="received_at_final_destination">The order is delivered to the final destination</string>
+    <string name="atmId">ATM ID</string>
+    <string name="approved">Approved</string>
+    <string name="add_comments">Add Comments</string>
+    <string name="upload_image_s">Upload Image(s)</string>
+    <string name="add"><u>Add</u></string>
+    <string name="select_size">Select Size</string>
+    <string name="bag_details">Bag Details</string>
+    <string name="print_consolidated_manifest">Print Consolidated Manifest</string>
+    <string name="runsheet_list">Runsheet List</string>
+    <string name="midmile_runsheets">Mid-mile Dispatch Runsheets</string>
+    <string name="acknowledge_delivery_slip">Acknowledge Delivery Slip</string>
+    <string name="scanned_slips">Scanned Slips</string>
+    <string name="close_bin">Close Bin</string>
+    <string name="bin_details">Bin Details</string>
+    <string name="close_bin_message">Do you want to continue with closing the bin ?</string>
+    <string name="package_count_label">Count : %1$d</string>
+
+    <string-array name="depositType">
+        <item>Select Deposit Type</item>
+        <item>CMS Pickup</item>
+        <item>Machine Deposit</item>
+        <item>Online</item>
+        <item>Self</item>
+        <item>UPI</item>
+    </string-array>
+
+
+</resources>
