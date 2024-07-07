@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar_settlement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/scan_content_layout"
+        layout="@layout/scan_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <TextView
+        android:id="@+id/labelShipmentList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_17"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="@string/shipments_in_the_trip"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_16"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scan_content_layout" />
+
+    <TextView
+        android:id="@+id/tvTaskCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:background="@drawable/count_background"
+        android:fontFamily="@font/sfui_text_semi_bold"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_10"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/txt_12"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/labelShipmentList"
+        app:layout_constraintStart_toEndOf="@id/labelShipmentList"
+        app:layout_constraintTop_toTopOf="@id/labelShipmentList"
+        tools:text="30" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShipments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:layout_constraintBottom_toTopOf="@id/btn_payment_layout"
+        app:layout_constraintTop_toBottomOf="@id/labelShipmentList"
+        tools:listitem="@layout/layout_reviewed_scanned_item" />
+
+    <include
+        android:id="@+id/btn_payment_layout"
+        layout="@layout/common_purple_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

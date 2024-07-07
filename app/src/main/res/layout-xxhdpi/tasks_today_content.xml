@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_search">
+
+
+    <TextView
+        android:id="@+id/tv_today_tasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/todays_tasks"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/txt_13"
+        android:fontFamily="@font/open_sans_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_sort_and_bagged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_40"
+        android:text="@string/sort_and_bagged"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sort_and_bagged" />
+
+    <TextView
+        android:id="@+id/tv_dispatched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/dispatched"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sort_and_bagged" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dispatched" />
+
+    <TextView
+        android:id="@+id/tv_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:text="@string/received"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dispatched" />
+
+    <TextView
+        android:id="@+id/tv_sort_and_bag_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40"
+        android:layout_marginEnd="20dp"
+        android:text="@string/sort_and_bag_count"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_sort_and_bagged"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dispatched_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="20dp"
+        android:text="@string/dispatched_count"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_dispatched"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sort_and_bag_count" />
+
+    <TextView
+        android:id="@+id/tv_received_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="20dp"
+        android:text="@string/received_count"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/txt_13"
+        android:padding="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_received"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dispatched_count" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

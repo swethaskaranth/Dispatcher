@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvNoOfBoxes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textSize="@dimen/txt_16"
+        android:lineSpacingMultiplier="1.19"
+        android:textColor="@color/unassigned_text_color"
+        android:text="@string/_no_boxes_in_this_shipment"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBoxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvNoOfBoxes"
+        android:layout_marginTop="@dimen/margin_13"/>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvNoOfBoxes"
+        app:layout_constraintBottom_toBottomOf="@id/tvNoOfBoxes"
+        app:srcCompat="@drawable/ic_baseline_clear_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

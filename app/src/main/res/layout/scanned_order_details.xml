@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@drawable/scan_border">
+
+    <TextView
+        android:id="@+id/items_picked_from_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_14"
+        android:textColor="@color/text_color_blue"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/no_of_orders_scanned"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_22"
+        />
+
+    <TextView
+        android:id="@+id/item_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_28"
+        android:textColor="#16325c"
+        android:lineSpacingExtra="0sp"
+        tools:text="0/12"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_22"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_grey"
+        android:layout_marginTop="@dimen/margin_8"/>
+
+    <TextView
+        android:id="@+id/tv_view_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_13"
+        android:textColor="#283593"
+        android:text="@string/view_details"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_22"
+        />
+
+</LinearLayout>

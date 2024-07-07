@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_border_with_rounded_corners"
+        android:paddingTop="@dimen/margin_12"
+        android:paddingBottom="@dimen/margin_12">
+
+
+    <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:lineSpacingMultiplier="1.38"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="SHELCAL 500MG TAB 10’S" />
+
+
+    <TextView
+            android:id="@+id/tvBatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            tools:text="Batch : KHG678"
+            android:textColor="@color/FF54698D"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+            android:id="@+id/tvReturnQuanityRaised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            tools:text="Return Request : 7"
+            android:textColor="@color/FF54698D"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBatch" />
+
+    <TextView
+            android:id="@+id/tvPickedQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="1.36"
+            tools:text="| Picked : 5"
+            android:textColor="@color/FF54698D"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toEndOf="@id/tvReturnQuanityRaised"
+            app:layout_constraintTop_toBottomOf="@id/tvBatch" />
+
+    <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/divivder_grey"
+            app:layout_constraintTop_toBottomOf="@id/tvReturnQuanityRaised" />
+
+
+    <TextView
+            android:id="@+id/labelAccepted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_9"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="3.33"
+            android:text="@string/accepted"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spAcceptReason"
+            app:layout_constraintBottom_toBottomOf="@id/spAcceptReason"/>
+
+    <Spinner
+            android:id="@+id/spAcceptReason"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_9"
+            android:layout_marginStart="@dimen/margin_18"
+            android:layout_marginEnd="@dimen/margin_18"
+            android:background="@drawable/spinner_in_focus_border"
+            app:layout_constraintStart_toEndOf="@id/labelAccepted"
+            app:layout_constraintEnd_toStartOf="@id/spAcceptQuantity"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <Spinner
+            android:id="@+id/spAcceptQuantity"
+            android:layout_width="@dimen/margin_60"
+            android:layout_height="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:background="@drawable/spinner_in_focus_border"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <TextView
+            android:id="@+id/labelRejected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:fontFamily="@font/open_sans_regular"
+            android:lineSpacingMultiplier="3.33"
+            android:text="@string/rejected"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/spRejectReason"
+            app:layout_constraintBottom_toBottomOf="@id/spRejectReason"/>
+
+    <Spinner
+            android:id="@+id/spRejectReason"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_9"
+            android:background="@drawable/spinner_in_focus_border"
+            app:layout_constraintStart_toStartOf="@id/spAcceptReason"
+            app:layout_constraintEnd_toEndOf="@id/spAcceptReason"
+            app:layout_constraintTop_toBottomOf="@id/spAcceptReason" />
+
+    <Spinner
+            android:id="@+id/spRejectQuantity"
+            android:layout_width="@dimen/margin_60"
+            android:layout_height="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:background="@drawable/spinner_in_focus_border"
+            app:layout_constraintTop_toBottomOf="@id/labelAccepted" />
+
+    <EditText
+        android:id="@+id/etRemarks"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        app:layout_constraintTop_toBottomOf="@id/labelRejected"
+        android:layout_marginStart="@dimen/margin_15"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/unassigned_text_color"
+        android:textColorHint="@color/hint"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionDone"
+        android:maxLength="512"
+        android:padding="@dimen/margin_8"
+        android:gravity="start"
+        android:hint="@string/add_comments"
+        android:background="@drawable/add_remark_background"
+        android:layout_marginTop="@dimen/margin_20"/>
+
+    <TextView
+        android:id="@+id/tvInvalid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etRemarks"
+        app:layout_constraintStart_toStartOf="@id/etRemarks"
+        android:text="Invalid value"
+        android:textColor="@color/error_red"
+        android:layout_marginTop="@dimen/margin_5"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

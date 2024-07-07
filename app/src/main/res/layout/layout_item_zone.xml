@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cbSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:translationX="-5dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/zoneNameLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivHighPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_14"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/zoneNameLayout"
+        app:layout_constraintStart_toEndOf="@id/cbSelect"
+        app:layout_constraintTop_toTopOf="@id/zoneNameLayout"
+        app:srcCompat="@drawable/ic_high_priority" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="cbSelect,ivHighPriority"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/zoneNameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/barrier1"
+        app:layout_constraintEnd_toStartOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvZone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvTaskCount"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="001OUN map6" />
+
+        <TextView
+            android:id="@+id/tvTaskCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_5"
+            android:background="@drawable/count_background"
+            android:fontFamily="@font/sfui_text_semi_bold"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="@id/tvZone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvZone"
+            tools:text="45" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tvDemerge, tvCancel"/>
+
+    <!--<ImageView
+        android:id="@+id/ivInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvTaskCount"
+        app:layout_constraintStart_toEndOf="@id/tvTaskCount"
+        app:layout_constraintTop_toTopOf="@id/tvTaskCount"
+        app:srcCompat="@drawable/ic_info_copy" />-->
+
+    <TextView
+        android:id="@+id/tvDemerge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="@string/de_merge"
+        android:textColor="@color/link_blue"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintHorizontal_bias="1"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/margin_5"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="@string/cancel"
+        android:textColor="@color/link_blue"
+        android:textSize="@dimen/txt_13"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searchSprinter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/spinner_in_focus_border"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_17"
+        android:paddingEnd="@dimen/margin_17"
+        android:text="@string/search_sprinters"
+        android:textColor="@color/color_c7"
+        android:textSize="@dimen/txt_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/zoneNameLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSprinter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/spinner_in_focus_border"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/zoneNameLayout"
+        tools:listitem="@layout/item_sprinter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

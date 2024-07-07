@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goflash.dispatch.features.lastmile.settlement.ui.activity.Step1UnscannedActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar_settlement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shipments_lost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_blue"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_12"
+        android:visibility="gone"
+        android:text="@string/undelivered_mps_shipments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvdamagedAndLost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/shipments_lost"
+        tools:listitem="@layout/items_undelivered_scanned" />
+
+    <TextView
+        android:id="@+id/select_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/md_blue"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_12"
+        android:text="@string/select_reason_for_shipments_not_received"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvdamagedAndLost"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/items_undelivered_scanned"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@id/select_reason"
+        app:layout_constraintBottom_toTopOf="@id/btn_payment_layout"
+        />
+
+    <include
+        android:id="@+id/btn_payment_layout"
+        layout="@layout/common_purple_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

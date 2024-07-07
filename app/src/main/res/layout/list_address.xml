@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/priorityCardItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:layout_marginBottom="@dimen/margin_16"
+    app:cardCornerRadius="@dimen/margin_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTaskType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_weight="0.8"
+                android:fontFamily="sans-serif-medium"
+                tools:text="@string/delivery"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/txt_14" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTaskOrderNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:fontFamily="sans-serif-medium"
+                tools:text="@string/order_id_label"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/txt_14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/labelViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:lineSpacingExtra="3.0dp"
+            android:textColor="@color/link_blue"
+            android:textSize="@dimen/txt_12"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/view_customer_details" />
+
+        <TextView
+            android:id="@+id/tvTaskAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:lineSpacingExtra="6sp"
+            android:textColor="@color/text_color_blue"
+            android:visibility="gone"
+            android:textSize="@dimen/txt_13"
+            tools:text="1st Floor, Tower 1, Commercial 2, Kohinoor Business Park, Premier Road, Kurla West, Mumbai - 400070" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

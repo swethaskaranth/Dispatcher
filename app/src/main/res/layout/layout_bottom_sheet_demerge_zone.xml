@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/labelDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_17"
+        android:layout_marginTop="@dimen/margin_19"
+        android:fontFamily="@font/open_sans_regular"
+        android:gravity="center"
+        android:text="Are you sure you want to De-merge Zone ?"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvZoneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_6"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:gravity="center"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="@dimen/txt_16"
+        app:layout_constraintStart_toStartOf="@id/labelDelete"
+        app:layout_constraintTop_toBottomOf="@id/labelDelete"
+        tools:text="Zone: Goregaon, Vile Parle, Juhu" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_ht"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@color/border_grey"
+        app:layout_constraintTop_toBottomOf="@id/tvZoneName" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="@dimen/divider_ht"
+        android:layout_height="0dp"
+        android:background="@color/border_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sana_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:padding="@dimen/margin_10"
+        android:text="@string/cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/divider1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sana_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:padding="@dimen/margin_10"
+        android:text="@string/confirm"
+        android:textAllCaps="true"
+        android:textColor="@color/unassigned_text_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/divider1"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

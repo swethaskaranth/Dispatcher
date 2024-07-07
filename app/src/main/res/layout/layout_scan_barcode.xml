@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar_with_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+            android:id="@+id/bgView"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/toolBar"
+            android:visibility="gone"/>
+
+    <include
+            android:id="@+id/scan_content_layout"
+            layout="@layout/scan_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <include
+            android:id="@+id/priority_count_layout"
+            layout="@layout/priority_count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_190"
+            android:layout_marginStart="@dimen/margin_17"
+            android:layout_marginEnd="@dimen/margin_17"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="scan_content_layout,priority_count_layout" />
+
+    <TextView
+            android:id="@+id/labelShipmentList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_17"
+            android:layout_marginTop="@dimen/margin_12"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/shipments_in_the_trip"
+            android:textColor="@color/unassigned_text_color"
+            android:textSize="@dimen/txt_16"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <TextView
+            android:id="@+id/tvTaskCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:background="@drawable/count_background"
+            android:fontFamily="@font/sfui_text_semi_bold"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/txt_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/labelShipmentList"
+            app:layout_constraintStart_toEndOf="@id/labelShipmentList"
+            app:layout_constraintTop_toTopOf="@id/labelShipmentList"
+            tools:text="30" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTasks"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_17"
+            android:layout_marginTop="@dimen/margin_9"
+            android:layout_marginEnd="@dimen/margin_17"
+            android:layout_marginBottom="@dimen/margin_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelShipmentList" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_7"
+            android:layout_marginBottom="@dimen/margin_17"
+            android:backgroundTint="@color/md_indigo_800"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add_shipment"
+            app:tint="@null"
+            app:useCompatPadding="true" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

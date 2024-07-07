@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/bag_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:textSize="@dimen/txt_13"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/text_color_blue"
+        android:lineSpacingExtra="4sp"
+        tools:text="@string/bag_id"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+
+        />
+
+    <TextView
+        android:id="@+id/shipment_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:textSize="@dimen/txt_13"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        tools:textColor="@color/text_color_blue"
+        android:lineSpacingExtra="4sp"
+        android:textAllCaps="true"
+        android:text="@string/shipments_label"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/margin_12"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        />
+
+</LinearLayout>

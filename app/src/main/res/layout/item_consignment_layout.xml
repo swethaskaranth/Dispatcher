@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        app:cardCornerRadius="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_16">
+
+            <TextView
+                android:id="@+id/tv_shipment_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                tool:text = "CID001"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/txt_17"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                tool:text="Arrived"
+                android:gravity="center"
+                android:textColor="@color/md_blue"
+                android:textSize="@dimen/txt_15"
+                android:fontFamily="sans-serif"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_assetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_14"
+            android:textColor="@color/md_blue"
+            android:lineSpacingExtra="11sp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="sans-serif-medium"
+            tool:text="(THEA_BLR) - Ramesh Kumar"
+            />
+
+        <TextView
+            android:id="@+id/tv_bags_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_14"
+            android:textColor="@color/md_blue"
+            android:lineSpacingExtra="11sp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            tool:text="5 Bags  |  30 Shipments"
+            android:fontFamily="sans-serif-medium"
+
+            />
+
+        <TextView
+                android:id="@+id/tv_dispatch_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_14"
+                android:textColor="@color/md_blue"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
+                tool:text="Dispatch Time: 18-3-20 | 10.30 am"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:textStyle="italic"
+                />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

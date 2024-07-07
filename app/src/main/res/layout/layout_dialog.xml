@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivPic"
+        android:layout_width="@dimen/margin_60"
+        android:layout_height="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_success"
+        android:visibility="visible"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ticket_created"
+        android:textSize="@dimen/txt_16"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="@dimen/margin_20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_will_be_reviewed_by_the_concerned_team"
+        android:textSize="@dimen/txt_14"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_20"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_line"/>
+
+    <TextView
+        android:id="@+id/txtDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_18"
+        android:fontFamily="@font/open_sana_bold"
+        android:layout_gravity="center"
+        android:text="@string/done"
+        android:textColor="@color/md_blue"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"/>
+
+
+</LinearLayout>

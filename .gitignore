@@ -1,0 +1,16 @@
+*.iml
+.gradle/
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.idea/
+*.apk
+app/release/
+app/debug/
+app/dev/
+app/qa/
+output.json
+/zxing-android-embedded/build
+local.properties

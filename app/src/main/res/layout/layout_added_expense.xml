@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_search">
+
+
+    <TextView
+        android:id="@+id/txtVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_11"
+        android:layout_marginTop="@dimen/margin_11"
+        android:fontFamily="@font/open_sans_regular"
+        android:lineSpacingExtra="@dimen/margin_18"
+        android:lineSpacingMultiplier="1.38"
+        android:text="@string/voucher_number"
+        android:textColor="@color/text_color_blue_dark"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_blue_dark"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:textSize="@dimen/txt_16"
+        android:layout_marginBottom="@dimen/margin_13"
+        android:lineSpacingMultiplier="1.13"
+        android:layout_marginTop="@dimen/margin_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtVoucher"
+        app:layout_constraintStart_toStartOf="@id/txtVoucher"
+        tools:text="123400" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_17"
+        app:layout_constraintTop_toTopOf="@id/txtVoucher"
+        app:layout_constraintBottom_toBottomOf="@id/tvVoucher"/>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_edit"
+        app:layout_constraintEnd_toStartOf="@id/ivDelete"
+        android:layout_marginEnd="@dimen/margin_19"
+        app:layout_constraintTop_toTopOf="@id/txtVoucher"
+        app:layout_constraintBottom_toBottomOf="@id/tvVoucher"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

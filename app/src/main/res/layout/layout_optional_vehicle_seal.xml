@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_optional_vehicle_seal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    app:layout_constraintTop_toTopOf="parent"
+    android:elevation="@dimen/margin_10"
+    android:layout_margin="@dimen/margin_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16">
+
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_id"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTripId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintStart_toEndOf="@id/tvLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_10"
+            tools:text="RFD / PP" />
+
+        <TextView
+            android:id="@+id/tvDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_14"
+            app:layout_constraintStart_toStartOf="@id/tvLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvLabel"
+            android:layout_marginTop="@dimen/margin_10"
+            tools:text="RFD / PP" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_14"
+            app:layout_constraintStart_toEndOf="@id/tvDriver"
+            app:layout_constraintTop_toBottomOf="@id/tvLabel"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            tools:text="RFD / PP" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invoiceList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/invoice_item"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/manifestList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/invoiceList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/invoice_item"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

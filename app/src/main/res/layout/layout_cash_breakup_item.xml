@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_15">
+
+    <TextView
+        android:id="@+id/tvTripId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginStart="@dimen/margin_16"
+        android:fontFamily="@font/open_sans_regular"
+        tools:text="Trip #120001"
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/md_blue"
+        />
+
+    <TextView
+        android:id="@+id/tvSprinter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTripId"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginStart="@dimen/margin_16"
+        android:fontFamily="@font/open_sans_regular"
+        tools:text="Arjun Reddy"
+        android:textStyle="bold"
+        android:textSize="@dimen/txt_14"
+        android:textColor="@color/text_color_blue"
+        />
+
+    <TextView
+        android:id="@+id/tvReconTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvSprinter"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginStart="@dimen/margin_16"
+        android:fontFamily="@font/open_sans_italic"
+        tools:text="Recon: 10-10-2021, 06.30 pm "
+        android:textSize="@dimen/txt_13"
+        android:textColor="@color/md_blue"
+        />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvTripId"
+        app:layout_constraintBottom_toTopOf="@id/tvReconTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:fontFamily="@font/open_sana_bold"
+        tools:text="25,000"
+        android:textSize="@dimen/txt_16"
+        android:textColor="@color/md_blue"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

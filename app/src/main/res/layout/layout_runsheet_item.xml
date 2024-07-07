@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8">
+
+        <TextView
+            android:id="@+id/tvReferenceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_11"
+            tools:text="1234567891"
+            android:textColor="@color/text_color_blue"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textSize="@dimen/txt_14"/>
+
+        <TextView
+            android:id="@+id/tvShipmentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvReferenceId"
+            android:layout_marginStart="@dimen/margin_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="+20 more "
+            android:visibility="gone"
+            android:textColor="@color/link_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="@dimen/txt_14"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/margin_11"
+            tools:text="RTO/Cancelled"
+            android:textColor="@color/md_blue"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="@dimen/txt_12"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_search">
+
+    <LinearLayout
+        android:id="@+id/ll_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/icon_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/margin_14"
+            app:srcCompat="@drawable/ic_sort_bag" />
+
+        <TextView
+            android:id="@+id/tv_sort_and_bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:layout_marginEnd="8dp"
+            android:text="@string/sort_and_bag"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:fontFamily="@font/open_sans_semi_bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_sort" />
+
+    <LinearLayout
+        android:id="@+id/ll_dispatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_1"
+        >
+
+        <ImageView
+            android:id="@+id/icon_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_1"
+            android:src="@drawable/ic_dispatch" />
+
+        <TextView
+            android:id="@+id/tv_dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:layout_marginEnd="8dp"
+            android:text="@string/dispatch"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:fontFamily="@font/open_sans_semi_bold"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_dispatch" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_2" >
+
+        <ImageView
+            android:id="@+id/icon_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/margin_14"
+            app:srcCompat="@drawable/ic_receive" />
+
+        <TextView
+            android:id="@+id/tv_receive_bags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:layout_marginEnd="8dp"
+            android:text="@string/receive_bags"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:fontFamily="@font/open_sans_semi_bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_receive" />
+
+    <LinearLayout
+        android:id="@+id/ll_receiveShipments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_3" >
+
+        <ImageView
+            android:id="@+id/icon_receiveShipments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_receive_shipments" />
+
+        <TextView
+            android:id="@+id/tv_receive_shipments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:layout_marginEnd="8dp"
+            android:text="@string/receive_shipments"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:fontFamily="@font/open_sans_semi_bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_receiveShipments"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_receiveShipments" />
+
+    <LinearLayout
+        android:id="@+id/ll_lastMile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_receiveShipments">
+
+        <ImageView
+            android:id="@+id/icon_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/margin_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_3"
+            app:srcCompat="@drawable/ic_last_mile" />
+
+        <TextView
+            android:id="@+id/tv_last_mile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_38"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:text="@string/last_mile"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_lastMile" />
+
+    <LinearLayout
+        android:id="@+id/ll_cash_closing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_4">
+
+        <ImageView
+            android:id="@+id/icon_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/margin_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_3"
+            app:srcCompat="@drawable/ic_add_cash" />
+
+        <TextView
+            android:id="@+id/tv_cash_closing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_31"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:text="@string/cash_closing"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/divivder_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_cash_closing" />
+
+    <LinearLayout
+        android:id="@+id/ll_Audit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_5">
+
+        <ImageView
+            android:id="@+id/icon_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/margin_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_4"
+            app:srcCompat="@drawable/ic_audit" />
+
+        <TextView
+            android:id="@+id/tv_audit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="8dp"
+            android:paddingTop="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_14"
+            android:text="@string/audit"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:fontFamily="@font/open_sans_semi_bold"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

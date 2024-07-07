@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar_settlement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_18"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="@string/select_images"
+        android:textColor="@color/text_color_blue_dark"
+        android:textSize="@dimen/txt_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <TextView
+        android:id="@+id/labelSelectAndReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginTop="@dimen/margin_4"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="@string/review_and_select_message"
+        android:textColor="@color/md_blue"
+        android:textSize="@dimen/txt_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelSelect" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReviewOrders"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelSelectAndReview"
+        app:layout_constraintBottom_toTopOf="@id/btn_approve"
+        android:layout_marginBottom="@dimen/margin_13"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        tools:listitem="@layout/layout_review_image_item"/>
+
+    <include
+        android:id="@+id/btn_approve"
+        layout="@layout/layout_approve_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

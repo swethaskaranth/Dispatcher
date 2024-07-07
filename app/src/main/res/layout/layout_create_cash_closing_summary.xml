@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_with_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cashCollection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_search"
+        android:padding="@dimen/margin_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/txtOpeningBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/opening_balance"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCashAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2000" />
+
+        <ImageView
+            android:id="@+id/icAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_17"
+            app:layout_constraintBottom_toBottomOf="@id/txtTotalCollected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTotalCollected"
+            app:srcCompat="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/txtTotalCollected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_14"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/total_cash_collected"
+            android:textColor="@color/link_blue"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toEndOf="@id/icAdd"
+            app:layout_constraintTop_toBottomOf="@id/txtOpeningBalance" />
+
+        <TextView
+            android:id="@+id/tvTotalCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintTop_toTopOf="@id/txtTotalCollected"
+            tools:text="100" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintTop_toBottomOf="@id/txtTotalCollected"
+            android:layout_marginTop="@dimen/margin_6"
+            android:background="@color/divivder_grey"/>
+
+        <TextView
+            android:id="@+id/txtTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_14"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/total_amount"
+            android:textColor="@color/text_color_blue_dark"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <TextView
+            android:id="@+id/tvTotalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue_dark"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintTop_toTopOf="@id/txtTotalAmount"
+            tools:text="100" />
+
+        <ImageView
+            android:id="@+id/icMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_17"
+            app:layout_constraintBottom_toBottomOf="@id/txtExpenses"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtExpenses"
+            app:srcCompat="@drawable/ic_dash" />
+
+        <TextView
+            android:id="@+id/txtExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_14"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/expenses"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toEndOf="@id/icMinus"
+            app:layout_constraintTop_toBottomOf="@id/txtTotalAmount" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:background="@drawable/count_background"
+            android:fontFamily="@font/sfui_text_semi_bold"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/txt_12"
+            app:layout_constraintBottom_toBottomOf="@id/txtExpenses"
+            app:layout_constraintStart_toEndOf="@id/txtExpenses"
+            app:layout_constraintTop_toTopOf="@id/txtExpenses"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/tvExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/canc_border"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintTop_toTopOf="@id/txtExpenses"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/tvAddExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/link_blue"
+            android:textSize="@dimen/txt_12"
+            android:background="@drawable/border_search"
+            android:layout_marginTop="@dimen/margin_8"
+            android:paddingStart="@dimen/margin_14"
+            android:paddingEnd="@dimen/margin_14"
+            android:paddingTop="@dimen/margin_4"
+            android:paddingBottom="@dimen/margin_4"
+            app:layout_constraintTop_toBottomOf="@id/txtExpenses"
+            app:layout_constraintStart_toStartOf="@id/txtExpenses"
+            android:text="@string/add_expense" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAddExpense"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/divivder_grey"/>
+
+        <TextView
+            android:id="@+id/txtCashInHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_14"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/cash_in_hand"
+            android:textColor="@color/text_color_blue_dark"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <TextView
+            android:id="@+id/tvCashInHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue_dark"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintTop_toTopOf="@id/txtCashInHand"
+            tools:text="100" />
+
+        <ImageView
+            android:id="@+id/icDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_17"
+            app:layout_constraintBottom_toBottomOf="@id/txtExpenses"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtExpenses"
+            app:srcCompat="@drawable/ic_dash" />
+
+        <TextView
+            android:id="@+id/txtCashPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_14"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/cash_pickup"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toEndOf="@id/icDash"
+            app:layout_constraintTop_toBottomOf="@id/tvCashInHand" />
+
+
+        <TextView
+            android:id="@+id/tvCashPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/canc_border"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintTop_toTopOf="@id/txtCashPickup"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/tvAddCashPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/link_blue"
+            android:textSize="@dimen/txt_12"
+            android:background="@drawable/border_search"
+            android:layout_marginTop="@dimen/margin_8"
+            android:paddingStart="@dimen/margin_14"
+            android:paddingEnd="@dimen/margin_14"
+            android:paddingTop="@dimen/margin_4"
+            android:paddingBottom="@dimen/margin_4"
+            app:layout_constraintTop_toBottomOf="@id/txtCashPickup"
+            app:layout_constraintStart_toStartOf="@id/txtCashPickup"
+            android:text="@string/add_cash_picked_up" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAddCashPickup"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@color/divivder_grey"/>
+
+
+        <TextView
+            android:id="@+id/txtCashClosingBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_18"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:text="@string/cash_closing_balance"
+            android:textColor="@color/text_color_blue_dark"
+            android:textSize="@dimen/txt_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+        <TextView
+            android:id="@+id/tvCashClosingBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:textColor="@color/text_color_blue_dark"
+            android:textSize="@dimen/txt_16"
+            android:layout_marginEnd="@dimen/margin_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintTop_toTopOf="@id/txtCashClosingBalance"
+            tools:text="100" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/btnCreate"
+        layout="@layout/common_purple_btn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+package com.goflash.dispatch.type
+
+enum class BagStatus {
+    CREATED, INTRANSIT, RECEIVED, CANCELLED, DISPATCHED, OUT_FOR_DELIVERY, COMPLETED, RECON_STARTED, RECON_FINISHED
+}

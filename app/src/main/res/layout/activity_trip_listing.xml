@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/toolBar1"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/toolBar1"
+/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_trip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar1"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="@dimen/margin_16"
+        tools:listitem="@layout/item_bag_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

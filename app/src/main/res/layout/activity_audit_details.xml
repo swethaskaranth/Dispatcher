@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white">
+
+    <include
+        android:id="@+id/toolBar1"
+        layout="@layout/toolbar_with_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/order_detail"
+        layout="@layout/audit_history_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_detail">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/scannedBagsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/scanned_bags"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/txt_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBagCount"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/scan_count_background"
+                android:gravity="center_horizontal"
+                android:paddingStart="@dimen/margin_5"
+                android:paddingEnd="@dimen/margin_5"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingBottom="@dimen/margin_2"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/txt_12"
+                app:layout_constraintBottom_toBottomOf="@id/scannedBagsLabel"
+                app:layout_constraintStart_toEndOf="@id/scannedBagsLabel"
+                tools:text="4/5" />
+
+            <LinearLayout
+                android:id="@+id/llScanBags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_12"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scannedBagsLabel">
+
+                <LinearLayout
+                    android:id="@+id/llextraBag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:gravity="center|start"
+                        android:text="@string/extra_bag_s"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16" />
+
+                    <TextView
+                        android:id="@+id/tvextraBagCount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:gravity="center|end"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16"
+                        tools:text="5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llshortBag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:gravity="center|start"
+                        android:text="@string/short_bag_s"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16" />
+
+                    <TextView
+                        android:id="@+id/tvshortBagCount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:gravity="center|end"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16"
+                        tools:text="2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvShipment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/scanned_shipments"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/txt_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llScanBags" />
+
+            <TextView
+                android:id="@+id/tvShipmentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_12"
+                android:background="@drawable/scan_count_background"
+                android:gravity="center_horizontal"
+                android:paddingStart="@dimen/margin_5"
+                android:paddingEnd="@dimen/margin_5"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingBottom="@dimen/margin_2"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/txt_12"
+                app:layout_constraintBottom_toBottomOf="@id/tvShipment"
+                app:layout_constraintStart_toEndOf="@id/tvShipment"
+                tools:text="14/25" />
+
+
+            <LinearLayout
+                android:id="@+id/llScanShipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvShipment">
+
+                <LinearLayout
+                    android:id="@+id/llextraShipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:gravity="center|start"
+                        android:text="@string/extra_shipments"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16" />
+
+                    <TextView
+                        android:id="@+id/tvextraShipment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:gravity="center|end"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16"
+                        tools:text="5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llmissingShipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/open_sans_semi_bold"
+                        android:gravity="center|start"
+                        android:text="@string/missing_shipments"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16" />
+
+                    <TextView
+                        android:id="@+id/tvmissingShipment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_20"
+                        android:layout_weight="0.5"
+                        android:gravity="center|end"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/txt_16"
+                        tools:text="2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--<LinearLayout
+            android:id="@+id/proceed_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_65"
+            android:background="@color/md_white_1000"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="8dp"
+                android:background="@color/md_orange_800"
+                android:letterSpacing="0.01"
+                android:text="@string/complete_task"
+                android:textAllCaps="false"
+                android:textColor="@color/off_white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
